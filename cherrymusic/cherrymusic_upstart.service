@@ -1,0 +1,15 @@
+[Unit]
+Description=Cherrymusic server upstart
+Documentation=man:cherrymusic
+# Start after network and specified mounts are available.
+After=network-online.target media-NASHDD1.mount
+Requires=media-NASHDD1.mount
+
+[Service]
+Type=simple
+User=pi
+ExecStart=/usr/local/bin/.cherrymusicupstart.sh
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target media-NASHDD1.mount
