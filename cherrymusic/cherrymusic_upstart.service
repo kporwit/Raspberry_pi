@@ -8,7 +8,7 @@ Requires=media-NASHDD1.mount
 [Service]
 Type=simple
 User=pi
-ExecStart=/usr/local/bin/.cherrymusicupstart.sh
+ExecStart=/usr/local/bin/cherrymusicupstart.sh
 Restart=on-failure
 
 [Install]
