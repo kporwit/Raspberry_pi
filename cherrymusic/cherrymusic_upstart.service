@@ -1,3 +1,5 @@
+#put in: /etc/systemd/system/
+
 [Unit]
 Description=Cherrymusic server upstart
 Documentation=man:cherrymusic
@@ -13,3 +15,8 @@ Restart=on-failure
 
 [Install]
 WantedBy=multi-user.target media-NASHDD1.mount
+
+#sudo chmod 644 /et/systemd/syste.cherrymusic_upstart.service
+#sudo systemctl daemon-reload
+#sudo systemctl enable cherrymusic_upstart.service
+#sudo systemctl start cherrymusic_upstart.service
